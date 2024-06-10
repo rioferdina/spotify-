@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemutar Musik</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="time">Giawww</div>
+        <div class="info">MEMAINKAN DARI PENCARIAN<br>Pencarian Terakhir</div>
+        <div class="album-cover">
+            <img src="album-cover.jpg" alt="Sampul Album">
+        </div>
+        <div class="song-details">
+            <div class="song-title">Cruel Summer</div>
+            <div class="artist-name">Maila Rahma Agiana</div>
+        </div>
+        <div class="controls">
+            <button class="control-btn" onclick="previousTrack()">⏮️</button>
+            <button class="control-btn" id="play-pause-btn" onclick="togglePlayPause()">
+                <svg id="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+                <svg id="pause-icon" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+                    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                </svg>
+            </button>
+            <button class="control-btn" onclick="nextTrack()">⏭️</button>
+        </div>
+        <div class="progress-container">
+            <span id="current-time">0:00</span>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <span id="duration">0:00</span>
+        </div>
+        <div class="lyrics">
+            <pre id="lyrics-content"></pre>
+        </div>
+        <audio id="audio" src="audio.mp3"></audio>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
